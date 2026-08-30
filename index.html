@@ -49,6 +49,9 @@
 .startBox h2{font-size:28px;margin:0 0 10px;color:#1e365f}.startBox p{margin:8px 0;color:#475569}.startBtn{margin-top:18px;border:0;border-radius:12px;padding:15px 34px;background:var(--blue);color:#fff;font-size:19px;font-weight:900;cursor:pointer;box-shadow:0 5px 14px rgba(47,103,216,.25)}
 .startBtn:hover{filter:brightness(.96)} body.exam-locked #exam,body.exam-locked .timerbar{visibility:hidden}
 .attempt-lock{margin-top:14px;padding:12px 14px;border:1px solid #f0c36d;background:#fff8e8;color:#7a4b00;border-radius:10px;font-weight:700;display:none}
+.teacher-reset-wrap{margin-top:12px;text-align:center}
+.teacherResetBtn{border:1px solid #d9a441;border-radius:10px;padding:10px 16px;background:#fff8e8;color:#7a4b00;font-weight:900;cursor:pointer;font-size:14px}
+.teacherResetBtn:hover{filter:brightness(.97)}
 </style>
 </head>
 <body class="exam-locked">
@@ -90,7 +93,7 @@
     <p>Vui lòng kiểm tra <b>Họ và tên chữ Hán</b> và <b>Ngày làm bài</b> ở phía trên.</p>
     <p>Thời gian <b>90 phút</b> sẽ bắt đầu tính ngay sau khi bạn bấm nút.</p>
     <button type="button" class="startBtn" id="startBtn">▶ BẮT ĐẦU LÀM BÀI</button>
-    <div id="attemptLock" class="attempt-lock"></div>
+    <div id="attemptLock" class="attempt-lock"></div><div class="teacher-reset-wrap"><button type="button" class="teacherResetBtn" id="teacherResetBtn">🔑 RESET DÀNH CHO GIÁO VIÊN</button></div>
   </div>
 </div>
 
@@ -112,7 +115,7 @@
 <h3>Bài 5. ĐỌC ĐOẠN VĂN – TRẢ LỜI CÂU HỎI (10 điểm)</h3>
 <div>Đọc đoạn văn và dùng tiếng Trung để trả lời câu hỏi.<br><b>Câu 51–60:</b> Chấp nhận câu trả lời dài hoặc ngắn hơn đáp án mẫu, miễn có đầy đủ tất cả các từ/cụm từ bắt buộc của đáp án mẫu.</div><div class="passage"><b>Đoạn 1: 我的周末</b><p>星期六上午，我没有课，所以起床以后，我先吃早饭，然后去图书馆。图书馆里的人很多，但是很安静。我找了一本汉语书，在里面看了两个小时。中午，我跟一个朋友一起去饭馆吃饭。<br><br>下午，我们没有回学校，而是去商店买东西。朋友想给妈妈买生日礼物，我想买一本词典。商店里的东西很多，有的很便宜，有的有点儿贵。朋友看了一件衣服，觉得颜色很好看，就买下来了。<br><br>晚上回到宿舍以后，我给爸爸妈妈打了一个电话，然后洗澡、看书。星期天我打算在宿舍休息，不出去玩。</p></div><div class="q" id="q-51" data-q="51"><div class="qtext"><b>Câu 51.</b> 星期六上午，他为什么去图书馆？</div><textarea id="ans51" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-52" data-q="52"><div class="qtext"><b>Câu 52.</b> 他在图书馆看了多长时间的书？</div><textarea id="ans52" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-53" data-q="53"><div class="qtext"><b>Câu 53.</b> 中午，他跟谁一起吃饭？</div><textarea id="ans53" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-54" data-q="54"><div class="qtext"><b>Câu 54.</b> 他的朋友为什么去商店？</div><textarea id="ans54" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-55" data-q="55"><div class="qtext"><b>Câu 55.</b> 星期天他打算做什么？</div><textarea id="ans55" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="passage"><b>Đoạn 2: 给朋友的生日礼物</b><p>今天是星期五，明天是小丽的生日。我和小王准备给她买一个生日礼物。下午下课以后，我们一起去商店。<br><br>小王想买一件漂亮的衣服，但是商店里的衣服有点儿贵。他先看了一件红色的衣服，又看了一件蓝色的衣服。蓝色的那件比较便宜，也很好看。小王问售货员：“可以试试吗？”售货员说：“当然可以。”小王试了试，觉得有一点儿大，所以没有买。后来我们看到一个很漂亮的书包，价格也比较合适，就决定买这个书包送给小丽。<br><br>晚上，我们给小丽打电话，问她明天什么时候有时间。她说明天晚上七点以后有时间。我们准备在她家给她过生日。</p></div><div class="q" id="q-56" data-q="56"><div class="qtext"><b>Câu 56.</b> 小丽什么时候过生日？</div><textarea id="ans56" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-57" data-q="57"><div class="qtext"><b>Câu 57.</b> 小王一开始想买什么？</div><textarea id="ans57" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-58" data-q="58"><div class="qtext"><b>Câu 58.</b> 小王为什么没有买蓝色的衣服？</div><textarea id="ans58" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-59" data-q="59"><div class="qtext"><b>Câu 59.</b> 他们最后买了什么？</div><textarea id="ans59" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div><div class="q" id="q-60" data-q="60"><div class="qtext"><b>Câu 60.</b> 他们准备什么时候给小丽过生日？</div><textarea id="ans60" placeholder="Dùng tiếng Trung để trả lời..."></textarea></div>
 </section>
-<div class="card actions"><button type="button" class="action submit" id="submitBtn">NỘP BÀI</button><button type="button" class="action reset" id="resetBtn">LÀM LẠI</button></div>
+<div class="card actions"><button type="button" class="action submit" id="submitBtn">NỘP BÀI</button><button type="button" class="action reset" id="resetBtn">LÀM LẠI</button><button type="button" class="teacherResetBtn" id="teacherResetBtnBottom">🔑 RESET GIÁO VIÊN</button></div>
 </form>
 
 <section class="card" id="result">
@@ -410,6 +413,83 @@ window.addEventListener("error",e=>{
 });
 
 // Khi mở lại file: khôi phục đúng lượt thi và thời gian còn lại, không cho tạo lượt mới.
+
+// RESET DÀNH CHO GIÁO VIÊN
+// Mật mã mặc định: GIALAC
+// Có thể đổi tại dòng TEACHER_RESET_CODE.
+const TEACHER_RESET_CODE="GIALAC";
+
+function teacherReset(){
+  const code=prompt("Nhập mã giáo viên để xóa lượt làm bài và cho phép học sinh làm lại:");
+  if(code===null)return;
+  if(code.trim().toUpperCase()!==TEACHER_RESET_CODE){
+    alert("Mã giáo viên không đúng.");
+    return;
+  }
+  if(!confirm("Xác nhận RESET? Toàn bộ lượt làm bài, đáp án đã lưu và trạng thái khóa trên trình duyệt này sẽ được xóa."))return;
+
+  try{
+    localStorage.removeItem(ATTEMPT_KEY);
+    localStorage.removeItem(ATTEMPT_KEY+"_answers");
+  }catch(e){}
+
+  clearInterval(timer);
+  timer=null;
+  submitted=false;
+  started=false;
+  attemptState=null;
+  left=90*60;
+  leaveCount=0;
+  leaveEvents=[];
+  away=false;
+  awayAt=null;
+
+  const form=document.getElementById("exam");
+  if(form)form.reset();
+
+  document.getElementById("studentName").value="";
+  document.getElementById("examDate").value="";
+  document.getElementById("timer").textContent="90:00";
+  document.getElementById("timer").classList.remove("danger");
+  document.getElementById("leaveCount").textContent="0";
+  document.getElementById("startScreen").style.display="block";
+  document.getElementById("attemptLock").style.display="none";
+  document.getElementById("startBtn").disabled=false;
+  document.getElementById("result").style.display="none";
+  document.getElementById("details").innerHTML="";
+  document.getElementById("score").textContent="";
+  document.getElementById("correctCount").textContent="";
+  document.getElementById("barfill").style.width="0%";
+  document.getElementById("topPct").textContent="0%";
+  document.body.classList.add("exam-locked");
+
+  document.querySelectorAll("#exam input,#exam textarea,#submitBtn").forEach(x=>x.disabled=false);
+  updateNav();
+  window.scrollTo({top:0,behavior:"smooth"});
+  alert("Đã RESET thành công. Học sinh có thể bắt đầu một lượt làm bài mới.");
+}
+
+document.getElementById("teacherResetBtn").onclick=teacherReset;
+document.getElementById("teacherResetBtnBottom").onclick=teacherReset;
+
+// Nút LÀM LẠI: chỉ xóa câu trả lời, không xóa khóa lượt thi.
+document.getElementById("resetBtn").onclick=()=>{
+  if(submitted){
+    alert("Bài đã nộp. Giáo viên hãy dùng nút RESET GIÁO VIÊN để mở lượt mới.");
+    return;
+  }
+  if(!started){
+    document.getElementById("exam").reset();
+    updateNav();
+    return;
+  }
+  if(confirm("Xóa toàn bộ câu trả lời hiện tại? Thời gian làm bài vẫn tiếp tục.")){
+    document.getElementById("exam").reset();
+    persistAnswers();
+    updateNav();
+  }
+};
+
 window.addEventListener("DOMContentLoaded",()=>{
   if(!document.querySelector(".navbtn")) makeNav();
   const restored=restoreAttempt();
